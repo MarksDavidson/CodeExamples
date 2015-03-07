@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!-- Darcie Milliken --> 
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title style="text-align:center"><%: Page.Title %> </title>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+
+    <header>
+       
+        <section class="banner">
+    <%--<img class="logo" src="images/logo.png">--%>
+    <h1></h1>
+    
+  </section>
+        <!-- Navigation Menu --> 
+    <ul class="menu">
+        <li><asp:HyperLink runat="server" ID="DefaultHyperLink" NavigateUrl="~/Default.aspx" ViewStateMode="Disabled">Travel Experts Home</asp:HyperLink></li> 
+        <li><asp:HyperLink runat="server" ID="InfoHyperLink" NavigateUrl="CustomerInfo.aspx" ViewStateMode="Disabled">Account Info</asp:HyperLink></li> 
+        <li><asp:HyperLink runat="server" ID="BookingsHyperLink" NavigateUrl="CustomerBookings.aspx" ViewStateMode="Disabled">Customer Bookings</asp:HyperLink></li> 
+        <li><asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" NavigateUrl="~/Account/Register2.aspx">Register</asp:HyperLink></li>
+       <li> <asp:HyperLink runat="server" ID="LoginHyperLink" NavigateUrl="Account/Login.aspx" ViewStateMode="Disabled">Login</asp:HyperLink> </li>
+        <li> <asp:LinkButton runat="server" OnClick="Logout" ID="LogoutLink" ViewStateMode="Disabled">Logout</asp:LinkButton></li> 
+  </ul> 
+        
+    </header>
+        <!-- Body Content --> 
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>
+                    &copy; <%: DateTime.Now.Year %> - Travel Experts
+                </p>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<%--
+Darcie Milliken
+
+Use this file to give css class styles to form controls, such as textboxes and validators.
+--%>
+
+<asp:TextBox runat="server" CssClass="entry"></asp:TextBox>
+
+<asp:DropDownList runat="server" CssClass="list"></asp:DropDownList>
+<asp:Button runat="server" CssClass="button" /> 
+<asp:RequiredFieldValidator runat="server" CssClass="validator"></asp:RequiredFieldValidator>
+<asp:CompareValidator runat="server" CssClass="validator"> </asp:CompareValidator>
+<asp:RegularExpressionValidator runat="server" CssClass="validator"></asp:RegularExpressionValidator>
+<asp:ValidationSummary runat="server" CssClass="validator"></asp:ValidationSummary>
