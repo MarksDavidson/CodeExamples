@@ -1,0 +1,5 @@
+Some of the larger folders are group projects ive worked on at SAIT
+Any Code that is commented with my name on top
+was originally developed by me
+
+the whole project is included to demonstrate functionality
